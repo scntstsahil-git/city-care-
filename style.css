@@ -1,0 +1,617 @@
+
+/* =================================
+   CITY CARE HOSPITAL
+   Premium Website CSS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #073B83;
+    --secondary: #0878D1;
+    --accent: #E92332;
+    --green: #0A9B70;
+    --light: #F2F7FF;
+    --white: #FFFFFF;
+    --dark: #10233F;
+    --text: #526176;
+    --shadow: 0 8px 30px rgba(7,59,131,0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* =================================
+   HEADER & NAVBAR
+================================= */
+
+.header {
+    width: 100%;
+    padding: 15px 7%;
+    background: rgba(255,255,255,0.96);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.07);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+#navbar a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: var(--secondary);
+}
+
+.nav-btn {
+    padding: 11px 22px;
+    border-radius: 30px;
+    background: var(--accent);
+    color: white !important;
+}
+
+#menuBtn {
+    display: none;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+    min-height: 600px;
+    padding: 65px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(
+        120deg,
+        #EAF4FF,
+        #FFFFFF,
+        #E5F7FF
+    );
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: clamp(35px, 5vw, 62px);
+    line-height: 1.2;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
+}
+
+.hero-content p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 550px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 480px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 30px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* =================================
+   STATS
+================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 35px 7%;
+    background: var(--primary);
+}
+
+.stats > div {
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.stats h2 {
+    font-size: 30px;
+    color: #FFD84D;
+}
+
+.stats p {
+    font-size: 13px;
+}
+
+/* =================================
+   COMMON SECTIONS
+================================= */
+
+.section {
+    padding: 85px 7%;
+}
+
+.section h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    color: var(--text);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.about p {
+    color: var(--text);
+    line-height: 1.9;
+}
+
+/* =================================
+   DEPARTMENTS
+================================= */
+
+.departments {
+    background: var(--light);
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    border-bottom: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+}
+
+.service-card .icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =================================
+   DOCTOR SECTION
+================================= */
+
+.doctors {
+    background: white;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.doctor-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-7px);
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.doctor-card h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin: 20px 10px 5px;
+}
+
+.doctor-card p {
+    color: var(--text);
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+/* =================================
+   APPOINTMENT SECTION
+================================= */
+
+.appointment {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color: white;
+}
+
+.appointment h2 {
+    color: white;
+}
+
+#appointmentForm {
+    max-width: 650px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#appointmentForm button {
+    padding: 15px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* =================================
+   QR CODE SECTION
+================================= */
+
+.qr-section {
+    background: var(--light);
+    text-align: center;
+}
+
+.qr-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#qrcode img,
+#qrcode canvas {
+    max-width: 100%;
+}
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 25px;
+    background: var(--light);
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    background: #DCEEFF;
+    transform: translateY(-5px);
+}
+
+.contact-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: #061D42;
+    color: white;
+    text-align: center;
+    padding: 30px 7%;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* =================================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    #navbar {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .department-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 25px;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =================================
+   RESPONSIVE - MOBILE
+================================= */
+
+@media (max-width: 550px) {
+
+    .header {
+        padding: 13px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: var(--shadow);
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 20px 3%;
+    }
+
+    .stats h2 {
+        font-size: 22px;
+    }
+
+    .stats p {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .department-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-card img {
+        height: 350px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-card {
+        padding: 20px;
+    }
+}
+
+
